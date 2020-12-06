@@ -16,6 +16,9 @@ prompt.get(schema, function (err, result) {
   incrementArray(result.number);
 });
 
+
+
+// Function to increment array of digit by 1
 const incrementArray = (number) => {
   // Number to array of digits
   const arrayDigit = number.split("");
@@ -31,11 +34,11 @@ const incrementArray = (number) => {
   } else {
     retenue = 1;
     for (let i = arrayDigit.length - 1; i >= 0; i--) {
-      //Digit se termine par un 9
+      //Digit finishing by 9
       if (arrayDigit[i] == 9) {
         arrayDigit[i] = 0;
 
-        // Digit ne se termine pas par un 9
+        // Digit NOT finishing by 9
       } else {
         if (retenue === 1) {
           arrayDigit[i]++;
